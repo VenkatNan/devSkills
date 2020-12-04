@@ -10,6 +10,11 @@
   <h3><%= skill.skill %></h3>
   <h3>Mastered?: <%= skill.done ? 'Yes' : 'No' %></h3>
   <a href="/skills/<%= skill.id %>/edit"> Edit skill? </a><br>
+
+  <form action="/skills/<%= skill.id %>?_method=DELETE" class="delBtn" method="POST">
+    <button type="submit">Delete Skill?</button>
+  </form>
+
   <a href="/skills">Back to my Skills</a>
 </body>
 </html>
